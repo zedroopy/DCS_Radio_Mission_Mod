@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Radios>
+  <aircraft name="F-14">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+</Radios>
