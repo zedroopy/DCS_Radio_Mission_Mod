@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Radios>
+  <aircraft name="A-10C">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="AJS37">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="AV8BNA">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="C-101CC">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="C-101EB">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="F-14B">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="F-16C_50">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="F-5E-3">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="F-86F Sabre">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="FA-18C_hornet">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="L-39C">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="L-39ZA">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="M-2000C">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="MiG-19P">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="MiG-21Bis">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="Ka-50">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="Mi-8MT">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="SA342L">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="SA342M">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="SA342Minigun">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="SA342Mistral">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="UH-1H">
+    <radio script-nbr="1" designation="UHF">
+      <preset nbr="1">225</preset>
+    </radio>
+  </aircraft>
+</Radios>
