@@ -18,8 +18,8 @@ This app parses through an XML file containing the desired preset frequencies (m
 It's meant to help mission designers, saving them from setting all presets on all 'Client' units each new mission they create.
  ### XML Template
 The XML template has to follow the default template tree, as it's validated against an XSD upon launch.
-For those unfamiliar with XML, it means it wouldn't accept new fields, and presets are limited to the maximum number set by DCS.
-It also means you can order each whole aircraft node as you'd like for example.
+For those unfamiliar with XML, it means it wouldn't accept new fields, and presets are limited.
+Basically, you can order each whole node as you'd like, but refrain from changing anything other than the frequencies (inner text).
 
 ----------
 # DCS_Radio_Mission_Mod
@@ -42,5 +42,5 @@ Cela permet d'aider les concepteurs de mission, en leur évitant de régler à l
 
  ### Modèle XML
 Le Modèle XML doit suivre une arborescence identique au modèle par défaut, car il est validé par rapport à un XSD au lancement.
-Pour ceux peu familier avec le XML, cela veut dire que le modèle n'accepte par de nouveau champ, et le nombre de presets est limité au maximum admis par DCS.
-Cela veut également dire que l'ordre des entités complètes importe peu et peut-être changé.
+Pour ceux peu familier avec le XML, cela veut dire que le modèle n'accepte pasde nouveau champ, et le nombre de presets est limité.
+Simplement, cela veut dire que l'ordre des entités complètes importe peu, mais que vous devez uniquement modifier la valeur des fréquences entre les balises.
