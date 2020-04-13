@@ -32,7 +32,7 @@ DCS_Radio_Mission_Mod.exe Fichier_Mission.miz [Fichier_Modèle.xml]
 
 Le fichier Modèle est optionnel, par défaut le programme utilisera le fichier 'template.xml' résidant dans le dossier de lancement.
 
-## What does it do?
+## Ca sert à quoi?
 La plupart des aéronefs équipés de radio possède une section Lua dans le fichier de mission détaillant tous les presets de chaque radio.
 Le A-10C, ancien module, utilise à la place 3 dossier+fichier pour régler ses radios.
 
