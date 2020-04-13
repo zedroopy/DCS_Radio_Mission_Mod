@@ -71,130 +71,612 @@
   <aircraft name="AJS37">
     <radio script-nbr="1" designation="V/UHF FR22">
       <preset nbr="1">225</preset>
-    </radio>
-    <radio script-nbr="2" designation="VHF FR24">
-      <preset nbr="1">125</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">124</preset>
+      <preset nbr="5">124</preset>
+      <preset nbr="6">124</preset>
+      <preset nbr="7">121.5</preset>
     </radio>
   </aircraft>
   <aircraft name="AV8BNA">
     <radio script-nbr="1" designation="V/UHF 1">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
+      <preset nbr="20">225</preset>
+      <preset nbr="21">225</preset>
+      <preset nbr="22">225</preset>
+      <preset nbr="23">225</preset>
+      <preset nbr="24">225</preset>
+      <preset nbr="25">225</preset>
+      <preset nbr="26">225</preset>
     </radio>
     <radio script-nbr="2" designation="V/UHF 2">
-      <preset nbr="1">225</preset>
+      <preset nbr="1">124</preset>
+      <preset nbr="2">124</preset>
+      <preset nbr="3">124</preset>
+      <preset nbr="4">124</preset>
+      <preset nbr="5">124</preset>
+      <preset nbr="6">124</preset>
+      <preset nbr="7">124</preset>
+      <preset nbr="8">124</preset>
+      <preset nbr="9">124</preset>
+      <preset nbr="10">124</preset>
+      <preset nbr="11">124</preset>
+      <preset nbr="12">124</preset>
+      <preset nbr="13">124</preset>
+      <preset nbr="14">124</preset>
+      <preset nbr="15">124</preset>
+      <preset nbr="16">124</preset>
+      <preset nbr="17">124</preset>
+      <preset nbr="18">124</preset>
+      <preset nbr="19">124</preset>
+      <preset nbr="20">124</preset>
+      <preset nbr="21">124</preset>
+      <preset nbr="22">124</preset>
+      <preset nbr="23">124</preset>
+      <preset nbr="24">124</preset>
+      <preset nbr="25">124</preset>
+      <preset nbr="26">124</preset>
     </radio>
-    <radio script-nbr="3" designation="VHF/FM">
+    <radio script-nbr="3" designation="V/UHF RCS">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
+      <preset nbr="20">225</preset>
+      <preset nbr="21">225</preset>
+      <preset nbr="22">225</preset>
+      <preset nbr="23">225</preset>
+      <preset nbr="24">225</preset>
+      <preset nbr="25">225</preset>
+      <preset nbr="26">225</preset>
+      <preset nbr="27">225</preset>
+      <preset nbr="28">225</preset>
+      <preset nbr="29">225</preset>
+      <preset nbr="30">225</preset>
     </radio>
   </aircraft>
   <aircraft name="C-101CC">
     <radio script-nbr="1" designation="UHF">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
+      <preset nbr="20">225</preset>
+      <preset nbr="21">225</preset>
     </radio>
   </aircraft>
   <aircraft name="C-101EB">
     <radio script-nbr="1" designation="UHF">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
+      <preset nbr="20">225</preset>
     </radio>
   </aircraft>
   <aircraft name="F-14B">
     <radio script-nbr="1" designation="UHF Pilot">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
+      <preset nbr="20">225</preset>
     </radio>
     <radio script-nbr="2" designation="V/UHF RIO">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
+      <preset nbr="20">225</preset>
+      <preset nbr="21">225</preset>
+      <preset nbr="22">225</preset>
+      <preset nbr="23">225</preset>
+      <preset nbr="24">225</preset>
+      <preset nbr="25">225</preset>
+      <preset nbr="26">225</preset>
+      <preset nbr="27">225</preset>
+      <preset nbr="28">225</preset>
+      <preset nbr="29">225</preset>
+      <preset nbr="30">225</preset>
     </radio>
   </aircraft>
   <aircraft name="F-16C_50">
     <radio script-nbr="1" designation="UHF">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
+      <preset nbr="20">225</preset>
     </radio>
     <radio script-nbr="2" designation="VHF">
-      <preset nbr="1">127</preset>
+      <preset nbr="1">124</preset>
+      <preset nbr="2">124</preset>
+      <preset nbr="3">124</preset>
+      <preset nbr="4">124</preset>
+      <preset nbr="5">124</preset>
+      <preset nbr="6">124</preset>
+      <preset nbr="7">124</preset>
+      <preset nbr="8">124</preset>
+      <preset nbr="9">124</preset>
+      <preset nbr="10">124</preset>
+      <preset nbr="11">124</preset>
+      <preset nbr="12">124</preset>
+      <preset nbr="13">124</preset>
+      <preset nbr="14">124</preset>
+      <preset nbr="15">124</preset>
+      <preset nbr="16">124</preset>
+      <preset nbr="17">124</preset>
+      <preset nbr="18">124</preset>
+      <preset nbr="19">124</preset>
+      <preset nbr="20">124</preset>
+    </radio>
+  </aircraft>
+  <aircraft name="JF-17">
+    <radio script-nbr="1" designation="COM 1/2">
+      <preset nbr="1">124</preset>
+      <preset nbr="2">124</preset>
+      <preset nbr="3">124</preset>
+      <preset nbr="4">124</preset>
+      <preset nbr="5">124</preset>
+      <preset nbr="6">124</preset>
+      <preset nbr="7">124</preset>
+      <preset nbr="8">124</preset>
+      <preset nbr="9">124</preset>
+      <preset nbr="10">124</preset>
+      <preset nbr="11">124</preset>
+      <preset nbr="12">124</preset>
+      <preset nbr="13">124</preset>
+      <preset nbr="14">124</preset>
+      <preset nbr="15">124</preset>
+      <preset nbr="16">124</preset>
+      <preset nbr="17">124</preset>
+      <preset nbr="18">124</preset>
+      <preset nbr="19">124</preset>
+      <preset nbr="20">124</preset>
     </radio>
   </aircraft>
   <aircraft name="F-5E-3">
     <radio script-nbr="1" designation="UHF">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
+      <preset nbr="20">225</preset>
     </radio>
   </aircraft>
   <aircraft name="F-86F Sabre">
     <radio script-nbr="1" designation="UHF">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="1">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
     </radio>
   </aircraft>
   <aircraft name="FA-18C_hornet">
     <radio script-nbr="1" designation="V/UHF 1">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
+      <preset nbr="20">225</preset>
     </radio>
     <radio script-nbr="2" designation="V/UHF 2">
-      <preset nbr="1">225</preset>
+      <preset nbr="1">124</preset>
+      <preset nbr="2">124</preset>
+      <preset nbr="3">124</preset>
+      <preset nbr="4">124</preset>
+      <preset nbr="5">124</preset>
+      <preset nbr="6">124</preset>
+      <preset nbr="7">124</preset>
+      <preset nbr="8">124</preset>
+      <preset nbr="9">124</preset>
+      <preset nbr="10">124</preset>
+      <preset nbr="11">124</preset>
+      <preset nbr="12">124</preset>
+      <preset nbr="13">124</preset>
+      <preset nbr="14">124</preset>
+      <preset nbr="15">124</preset>
+      <preset nbr="16">124</preset>
+      <preset nbr="17">124</preset>
+      <preset nbr="18">124</preset>
+      <preset nbr="19">124</preset>
+      <preset nbr="20">124</preset>
     </radio>
   </aircraft>
   <aircraft name="L-39C">
     <radio script-nbr="1" designation="UHF">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
     </radio>
   </aircraft>
   <aircraft name="L-39ZA">
     <radio script-nbr="1" designation="UHF">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
     </radio>
   </aircraft>
   <aircraft name="M-2000C">
     <radio script-nbr="1" designation="UHF Rouge">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
+      <preset nbr="20">225</preset>
     </radio>
     <radio script-nbr="2" designation="V/UHF Verte">
-      <preset nbr="1">225</preset>
+      <preset nbr="1">124</preset>
+      <preset nbr="2">124</preset>
+      <preset nbr="3">124</preset>
+      <preset nbr="4">124</preset>
+      <preset nbr="5">124</preset>
+      <preset nbr="6">124</preset>
+      <preset nbr="7">124</preset>
+      <preset nbr="8">124</preset>
+      <preset nbr="9">124</preset>
+      <preset nbr="10">124</preset>
+      <preset nbr="11">124</preset>
+      <preset nbr="12">124</preset>
+      <preset nbr="13">124</preset>
+      <preset nbr="14">124</preset>
+      <preset nbr="15">124</preset>
+      <preset nbr="16">124</preset>
+      <preset nbr="17">124</preset>
+      <preset nbr="18">124</preset>
+      <preset nbr="19">124</preset>
+      <preset nbr="20">124</preset>
     </radio>
   </aircraft>
   <aircraft name="MiG-19P">
     <radio script-nbr="1" designation="VHF">
-      <preset nbr="1">121</preset>
+      <preset nbr="1">124</preset>
+      <preset nbr="2">124</preset>
+      <preset nbr="3">124</preset>
+      <preset nbr="4">124</preset>
+      <preset nbr="5">124</preset>
+      <preset nbr="6">124</preset>
     </radio>
   </aircraft>
   <aircraft name="MiG-21Bis">
     <radio script-nbr="1" designation="VHF">
       <preset nbr="1">124</preset>
+      <preset nbr="2">124</preset>
+      <preset nbr="3">124</preset>
+      <preset nbr="4">124</preset>
+      <preset nbr="5">124</preset>
+      <preset nbr="6">124</preset>
+      <preset nbr="7">124</preset>
+      <preset nbr="8">124</preset>
+      <preset nbr="9">124</preset>
+      <preset nbr="10">124</preset>
+      <preset nbr="11">124</preset>
+      <preset nbr="12">124</preset>
+      <preset nbr="13">124</preset>
+      <preset nbr="14">124</preset>
+      <preset nbr="15">124</preset>
+      <preset nbr="16">124</preset>
+      <preset nbr="17">124</preset>
+      <preset nbr="18">124</preset>
+      <preset nbr="19">124</preset>
     </radio>
   </aircraft>
   <aircraft name="Ka-50">
     <radio script-nbr="1" designation="VHF/FM R-828">
-      <preset nbr="1">225</preset>
+      <preset nbr="1">30</preset>
+      <preset nbr="2">30</preset>
+      <preset nbr="3">30</preset>
+      <preset nbr="4">30</preset>
+      <preset nbr="5">30</preset>
+      <preset nbr="6">30</preset>
+      <preset nbr="7">30</preset>
+      <preset nbr="8">30</preset>
+      <preset nbr="9">30</preset>
+      <preset nbr="10">30</preset>
     </radio>
   </aircraft>
   <aircraft name="Mi-8MT">
     <radio script-nbr="1" designation="VHF R-863">
-      <preset nbr="1">225</preset>
+      <preset nbr="1">124</preset>
+      <preset nbr="2">124</preset>
+      <preset nbr="3">124</preset>
+      <preset nbr="4">124</preset>
+      <preset nbr="5">124</preset>
+      <preset nbr="6">124</preset>
+      <preset nbr="7">124</preset>
+      <preset nbr="8">124</preset>
+      <preset nbr="9">124</preset>
+      <preset nbr="10">124</preset>
+      <preset nbr="11">124</preset>
+      <preset nbr="12">124</preset>
+      <preset nbr="13">124</preset>
+      <preset nbr="14">124</preset>
+      <preset nbr="15">124</preset>
+      <preset nbr="16">124</preset>
+      <preset nbr="17">124</preset>
+      <preset nbr="18">124</preset>
+      <preset nbr="19">124</preset>
+      <preset nbr="20">124</preset>
     </radio>
-    <radio script-nbr="2" designation="VHF/FM R-828">
-      <preset nbr="1">225</preset>
+    <radio script-nbr="1" designation="VHF/FM R-828">
+      <preset nbr="1">30</preset>
+      <preset nbr="2">30</preset>
+      <preset nbr="3">30</preset>
+      <preset nbr="4">30</preset>
+      <preset nbr="5">30</preset>
+      <preset nbr="6">30</preset>
+      <preset nbr="7">30</preset>
+      <preset nbr="8">30</preset>
+      <preset nbr="9">30</preset>
+      <preset nbr="10">30</preset>
     </radio>
   </aircraft>
   <aircraft name="SA342L">
-    <radio script-nbr="1" designation="UHF">
-      <preset nbr="1">225</preset>
+    <radio script-nbr="1" designation="FM">
+      <preset nbr="1">30</preset>
+      <preset nbr="2">30</preset>
+      <preset nbr="3">30</preset>
+      <preset nbr="4">30</preset>
+      <preset nbr="5">30</preset>
+      <preset nbr="6">30</preset>
+      <preset nbr="7">30</preset>
     </radio>
   </aircraft>
   <aircraft name="SA342M">
-    <radio script-nbr="1" designation="UHF">
-      <preset nbr="1">225</preset>
+    <radio script-nbr="1" designation="FM">
+      <preset nbr="1">30</preset>
+      <preset nbr="2">30</preset>
+      <preset nbr="3">30</preset>
+      <preset nbr="4">30</preset>
+      <preset nbr="5">30</preset>
+      <preset nbr="6">30</preset>
+      <preset nbr="7">30</preset>
     </radio>
   </aircraft>
   <aircraft name="SA342Minigun">
-    <radio script-nbr="1" designation="UHF">
-      <preset nbr="1">225</preset>
+    <radio script-nbr="1" designation="FM">
+      <preset nbr="1">30</preset>
+      <preset nbr="2">30</preset>
+      <preset nbr="3">30</preset>
+      <preset nbr="4">30</preset>
+      <preset nbr="5">30</preset>
+      <preset nbr="6">30</preset>
+      <preset nbr="7">30</preset>
     </radio>
   </aircraft>
   <aircraft name="SA342Mistral">
-    <radio script-nbr="1" designation="UHF">
-      <preset nbr="1">225</preset>
+    <radio script-nbr="1" designation="FM">
+      <preset nbr="1">30</preset>
+      <preset nbr="2">30</preset>
+      <preset nbr="3">30</preset>
+      <preset nbr="4">30</preset>
+      <preset nbr="5">30</preset>
+      <preset nbr="6">30</preset>
+      <preset nbr="7">30</preset>
     </radio>
   </aircraft>
   <aircraft name="UH-1H">
-    <radio script-nbr="1" designation="VHF/AM">
+    <radio script-nbr="1" designation="UHF">
       <preset nbr="1">225</preset>
+      <preset nbr="2">225</preset>
+      <preset nbr="3">225</preset>
+      <preset nbr="4">225</preset>
+      <preset nbr="5">225</preset>
+      <preset nbr="6">225</preset>
+      <preset nbr="7">225</preset>
+      <preset nbr="8">225</preset>
+      <preset nbr="9">225</preset>
+      <preset nbr="10">225</preset>
+      <preset nbr="11">225</preset>
+      <preset nbr="12">225</preset>
+      <preset nbr="13">225</preset>
+      <preset nbr="14">225</preset>
+      <preset nbr="15">225</preset>
+      <preset nbr="16">225</preset>
+      <preset nbr="17">225</preset>
+      <preset nbr="18">225</preset>
+      <preset nbr="19">225</preset>
+      <preset nbr="20">225</preset>
     </radio>
   </aircraft>
 </Radios>

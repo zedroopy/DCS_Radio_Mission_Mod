@@ -9,10 +9,10 @@
               <xs:element maxOccurs="unbounded" name="radio">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element maxOccurs="unbounded" name="preset">
+                    <xs:element maxOccurs="30" name="preset">
                       <xs:complexType>
                         <xs:simpleContent>
-                          <xs:extension base="xs:unsignedInt">
+                          <xs:extension base="xs:decimal">
                             <xs:attribute name="nbr" type="xs:unsignedByte" use="required" />
                           </xs:extension>
                         </xs:simpleContent>
