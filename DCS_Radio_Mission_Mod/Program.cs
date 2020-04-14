@@ -40,127 +40,152 @@ namespace DCS_Radio_Mission_Mod
             XmlNodeList nodes = root.SelectNodes("aircraft");
             string wpath = "", defaultFreq="";
             string[] a = arr;
+            int units, skill, name, presets, type, radios, sortie, coalition, coalitionBlue, coalitionRed, lastLine;
+            units = skill = name = presets = type = radios = sortie = coalition = coalitionBlue = coalitionRed = lastLine = 1;
+            Regex RegUnit = new Regex("\\[\\d\\]");
+            Regex RegClient = new Regex("\\[\\\"skill\\\"\\]\\s*=\\s*\\\"Client\\\"");
+            Regex RegFreq = new Regex("\\d+(\\.\\d+)?(?=,|(\r\n))"); // look for at least 1 digit or digits.digits, directly followed by a , or a \r\n
+            int count = 0;
+
             foreach (XmlNode node in nodes)
             {
-               
-                // Find the upper boundary to skip the non-coalition fields
-                int sortie = Array.FindIndex(a, s => s.Contains("[\"sortie\"]"));
-
+                count = 0;
                 // Look forward through the string[] to find the matching field
-                int coalition = Array.FindIndex(a, s => s.Contains("[\"coalition\"]")); // Has to follow ["coalition"]
+                coalition = Array.FindIndex(a, s => s.Contains("[\"coalition\"]")); // locate ["coalition"]
+                // Find the upper boundary to skip the non-coalition fields
+                sortie = Array.FindIndex(a, s => s.Contains("[\"sortie\"]"));
 
                 // Find Coalitions boundaries
-                int coalitionChoice;
-                int coalitionBlue = Array.FindIndex(a, coalition, sortie - coalition, s => s.Contains("[\"blue\"]"));
-                int coalitionRed = Array.FindIndex(a, coalition, sortie - coalition, s => s.Contains("[\"red\"]"));
+                coalitionBlue = Array.FindIndex(a, coalition, sortie - coalition, s => s.Contains("[\"blue\"]"));   // Locate ["blue"]
+                coalitionRed = Array.FindIndex(a, coalition, sortie - coalition, s => s.Contains("[\"red\"]")); // Locate ["red"]
                 if (side.Key == ConsoleKey.B)
                 {
                     // BLUE: Force upper bound to "red" line
-                    coalitionChoice = coalitionBlue;
                     sortie = coalitionRed;
                 }
                 else
                 {
                     // RED: Force lower bound to "red" line
-                    coalitionChoice = coalitionRed;
                     coalition = coalitionRed;
                 }
 
-                int country = Array.FindIndex(a, coalition, sortie - coalition, s => s.Contains("[\"country\"]"));  // Has to follow ["country"]
-                int units = Array.FindIndex(a, country, sortie - country, s => s.Contains("[\"units\"]"));    // Has to follow ["units"]
-                int type = Array.FindIndex(a, units, sortie - units, s => s.Contains("[\"type\"]"));    // Has to follow ["type"]
-                int count=0;
-                int name = Array.FindIndex(a, type, sortie - type, s => s.Contains("\"" + node.Attributes["name"].Value + "\"")); // Match the aircraft type
-                int presets = name;
-                while (name != -1)
+                lastLine = coalition;
+
+                while (Array.FindIndex(a, lastLine, sortie - lastLine, s => s.Contains("[\"country\"]")) != -1)
                 {
-                    // Aircraft is found in mission file
-                    count++;
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine(@"¤¤¤¤¤ " + node.Attributes["name"].Value + @" #"+count.ToString()+@" ¤¤¤¤¤");
-                    Console.ResetColor();
-                    if (node.Attributes["name"].Value == "A-10C")
+                    lastLine = Array.FindIndex(a, lastLine, sortie - lastLine, s => s.Contains("[\"country\"]")); // Locate Next ["country"]
+                    units = Array.FindIndex(a, lastLine, sortie - lastLine, s => s.Contains("[\"units\"]"));    // Locate ["units"]
+                    if (units != -1)
                     {
-                        // Création de fichiers spécifiques au A-10C
-
-                        foreach (XmlNode radio in node.ChildNodes)
+                        lastLine = units;
+                        while (Array.FindIndex(a, lastLine, sortie - lastLine, s => RegUnit.Match(s).Success) != -1)
                         {
-                            switch (radio.Attributes["designation"].Value)
+                            lastLine = Array.FindIndex(a, lastLine, sortie - lastLine, s => RegUnit.Match(s).Success);
+                            skill = Array.FindIndex(a, lastLine, sortie - lastLine, s => RegClient.Match(s).Success);    // Check Skill setting
+                            if (skill != -1)
                             {
-                                case "VHF/AM":
-                                    wpath = path + @"\" + A10Radios[0];
-                                    defaultFreq = "124000000";
-                                    Console.Write("|  VHF/AM  |  ");
-                                    break;
-                                case "UHF":
-                                    wpath = path + @"\" + A10Radios[1];
-                                    defaultFreq = "251000000";
-                                    Console.Write("UHF  |  ");
-                                    break;
-                                case "VHF/FM":
-                                    wpath = path + @"\" + A10Radios[2];
-                                    defaultFreq = "30000000";
-                                    Console.Write("VHF/FM");
-                                    break;
-                                default:
-                                    Console.WriteLine("Radio designations incorrect or missing for the A-10C.");
-                                    wpath = "";
-                                    break;
-                            }
-                            if (wpath != "")
-                            {
-                                if (!Directory.Exists(wpath))
+                                lastLine = skill;
+                                type = Array.FindIndex(a, lastLine, sortie - lastLine, s => s.Contains("[\"type\"]"));    // Locate ["type"]
+                                if (type != -1)
                                 {
-                                    Directory.CreateDirectory(wpath);
-                                }
-                                File.WriteAllText(wpath + @"\SETTINGS.lua", "-- A-10C " + radio.Attributes["designation"].Value + " Radio settings\n"
-                                    + "settings=\n{\n\t{\n\t\t\t[\"mode_dial\"]=0,\n\t\t\t[\"manual_frequency\"]=" + defaultFreq + ",\n\t\t\t[\"selection_dial\"]=0,\n"
-                                    + "\t\t\t[\"channel_dial\"]=0,\n\t},\n\t[\"presets\"]=\n\t{\n\t\t");
+                                    lastLine = type;
+                                    name = Array.FindIndex(a, lastLine, sortie - lastLine, s => s.Contains("\"" + node.Attributes["name"].Value + "\""));
+                                    if ( name != -1)
+                                    {
+                                        lastLine = name;
+                                        // Aircraft is found in mission file
+                                        count++;
+                                        Console.BackgroundColor = ConsoleColor.DarkBlue;
+                                        Console.ForegroundColor = ConsoleColor.Cyan;
+                                        Console.WriteLine(@"¤¤¤¤¤ " + node.Attributes["name"].Value + @" #" + count.ToString() + @" ¤¤¤¤¤");
+                                        Console.ResetColor();
+                                        if (node.Attributes["name"].Value == "A-10C")
+                                        {
+                                            // Création de fichiers spécifiques au A-10C
+                                            foreach (XmlNode radio in node.ChildNodes)
+                                            {
+                                                switch (radio.Attributes["designation"].Value)
+                                                {
+                                                    case "VHF/AM":
+                                                        wpath = path + @"\" + A10Radios[0];
+                                                        defaultFreq = "124000000";
+                                                        Console.Write("|  VHF/AM  |  ");
+                                                        break;
+                                                    case "UHF":
+                                                        wpath = path + @"\" + A10Radios[1];
+                                                        defaultFreq = "251000000";
+                                                        Console.Write("UHF  |  ");
+                                                        break;
+                                                    case "VHF/FM":
+                                                        wpath = path + @"\" + A10Radios[2];
+                                                        defaultFreq = "30000000";
+                                                        Console.Write("VHF/FM");
+                                                        break;
+                                                    default:
+                                                        Console.WriteLine("Radio designations incorrect or missing for the A-10C.");
+                                                        wpath = "";
+                                                        break;
+                                                }
+                                                if (wpath != "")
+                                                {
+                                                    if (!Directory.Exists(wpath))
+                                                    {
+                                                        Directory.CreateDirectory(wpath);
+                                                    }
+                                                    File.WriteAllText(wpath + @"\SETTINGS.lua", "-- A-10C " + radio.Attributes["designation"].Value + " Radio settings\n"
+                                                        + "settings=\n{\n\t{\n\t\t\t[\"mode_dial\"]=0,\n\t\t\t[\"manual_frequency\"]=" + defaultFreq + ",\n\t\t\t[\"selection_dial\"]=0,\n"
+                                                        + "\t\t\t[\"channel_dial\"]=0,\n\t},\n\t[\"presets\"]=\n\t{\n\t\t");
 
-                                foreach (XmlNode preset in radio.ChildNodes)
-                                {
-                                    File.AppendAllText(wpath + @"\SETTINGS.lua", "\t\t\t[" + preset.Attributes["nbr"].Value + "]=" + preset.InnerText + ",\n");
-                                    //DBG:Console.WriteLine("[" + preset.Attributes["nbr"].Value + "]=>" + preset.InnerText);
+                                                    foreach (XmlNode preset in radio.ChildNodes)
+                                                    {
+                                                        File.AppendAllText(wpath + @"\SETTINGS.lua", "\t\t\t[" + preset.Attributes["nbr"].Value + "]=" + preset.InnerText + ",\n");
+                                                        //DBG:Console.WriteLine("[" + preset.Attributes["nbr"].Value + "]=>" + preset.InnerText);
+                                                    }
+                                                    File.AppendAllText(wpath + @"\SETTINGS.lua", "\t\t},\n}");
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            radios = Array.FindIndex(a, lastLine, sortie - lastLine, s => s.Contains("[\"Radio\"]"));   // Locate ["Radio"]
+                                            if (radios != 1)
+                                            {
+                                                lastLine = radios;
+                                                Console.Write("|  ");
+                                                foreach (XmlNode radio in node.ChildNodes)
+                                                {
+                                                    lastLine = Array.FindIndex(a, lastLine, sortie - lastLine, s => s.Contains("[" + radio.Attributes["script-nbr"].Value + "]"));    // Match the radio number
+                                                    Console.Write(radio.Attributes["designation"].Value + "  |  ");
+                                                    lastLine = Array.FindIndex(a, lastLine, sortie - lastLine, s => s.Contains("[\"channels\"]"));    // Has to follow ["channels"]
+                                                    foreach (XmlNode preset in radio.ChildNodes)
+                                                    {
+                                                        presets = Array.FindIndex(a, lastLine, sortie - lastLine, s => s.Contains("[" + preset.Attributes["nbr"].Value + "]"));  // Match the channel number
+                                                        //DBG:Found the preset, display old version
+                                                        //DBG:Console.Write(RemoveLeadingSpace(a[presets]) + " => ");
+                                                        a[presets] = RegFreq.Replace(a[presets], preset.InnerText); // replace with new frequency
+                                                        //DBG:Display modified version
+                                                        //DBG:Console.WriteLine(RemoveLeadingSpace(a[presets]));
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        lastLine++;
+                                        Console.WriteLine("\n");
+                                    }
                                 }
-                                File.AppendAllText(wpath + @"\SETTINGS.lua", "\t\t},\n}");
                             }
-                        }
-                        presets=name+1;
-                    }
-                    else
-                    {
-                        int radios = Array.FindIndex(a, name, sortie - name, s => s.Contains("[\"Radio\"]"));   // Has to follow ["Radio"]
-                        Console.Write("|  ");
-                        foreach (XmlNode radio in node.ChildNodes)
-                        {
-                            int radio_nbr = Array.FindIndex(a, radios, sortie - radios, s => s.Contains("[" + radio.Attributes["script-nbr"].Value + "]"));    // Match the radio number
-                            Console.Write(radio.Attributes["designation"].Value + "  |  ");
-                            int channels = Array.FindIndex(a, radio_nbr, sortie - radio_nbr, s => s.Contains("[\"channels\"]"));    // Has to follow ["channels"]
-                            foreach (XmlNode preset in radio.ChildNodes)
-                            {
-                                presets = Array.FindIndex(a, channels, sortie - channels, s => s.Contains("[" + preset.Attributes["nbr"].Value + "]"));  // Match the channel number
-                                //DBG:Found the preset, display old version
-                                //DBG:Console.Write(RemoveLeadingSpace(a[presets]) + " => ");
-                                Regex regex = new Regex("\\d+(\\.\\d+)?(?=,|(\r\n))"); // look for at least 1 digit or digits.digits, directly followed by a , or a \r\n
-                                a[presets] = regex.Replace(a[presets], preset.InnerText); // replace with new frequency
-                                //DBG:Display modified version
-                                //DBG:Console.WriteLine(RemoveLeadingSpace(a[presets]));
-                            }
-                            radios = presets;
+                            lastLine++;
                         }
                     }
-                    Console.WriteLine("\n");
-                    name = Array.FindIndex(a, presets, sortie - presets, s => s.Contains("\"" + node.Attributes["name"].Value + "\"")); // Match the aircraft type
+                    lastLine++;
                 }
                 if (count == 0)
                 {
                     // XML Aircraft not found in mission file. Normal behaviour.
                     Console.ForegroundColor = ConsoleColor.DarkGray;
-                    Console.WriteLine("no "+ node.Attributes["name"].Value+" unit found.\n");
+                    Console.WriteLine("no client " + node.Attributes["name"].Value + " unit found.\n");
                     Console.ResetColor();
                 }
-                
             }
             return a;
 
