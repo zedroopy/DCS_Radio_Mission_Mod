@@ -91,17 +91,17 @@ namespace DCS_Radio_Mission_Mod
                                 case "VHF/AM":
                                     wpath = path + @"\" + A10Radios[0];
                                     defaultFreq = "124000000";
-                                    Console.WriteLine("VHF/AM");
+                                    Console.Write("|  VHF/AM  |  ");
                                     break;
                                 case "UHF":
                                     wpath = path + @"\" + A10Radios[1];
                                     defaultFreq = "251000000";
-                                    Console.WriteLine("UHF");
+                                    Console.Write("UHF  |  ");
                                     break;
                                 case "VHF/FM":
                                     wpath = path + @"\" + A10Radios[2];
                                     defaultFreq = "30000000";
-                                    Console.WriteLine("VHF/FM");
+                                    Console.Write("VHF/FM");
                                     break;
                                 default:
                                     Console.WriteLine("Radio designations incorrect or missing for the A-10C.");
@@ -131,10 +131,11 @@ namespace DCS_Radio_Mission_Mod
                     else
                     {
                         int radios = Array.FindIndex(a, name, sortie - name, s => s.Contains("[\"Radio\"]"));   // Has to follow ["Radio"]
+                        Console.Write("|  ");
                         foreach (XmlNode radio in node.ChildNodes)
                         {
                             int radio_nbr = Array.FindIndex(a, radios, sortie - radios, s => s.Contains("[" + radio.Attributes["script-nbr"].Value + "]"));    // Match the radio number
-                            Console.WriteLine("Radio n°" + radio.Attributes["script-nbr"].Value + " : " + radio.Attributes["designation"].Value);
+                            Console.Write(radio.Attributes["designation"].Value + "  |  ");
                             int channels = Array.FindIndex(a, radio_nbr, sortie - radio_nbr, s => s.Contains("[\"channels\"]"));    // Has to follow ["channels"]
                             foreach (XmlNode preset in radio.ChildNodes)
                             {
@@ -149,14 +150,14 @@ namespace DCS_Radio_Mission_Mod
                             radios = presets;
                         }
                     }
-                    Console.WriteLine("");
+                    Console.WriteLine("\n");
                     name = Array.FindIndex(a, presets, sortie - presets, s => s.Contains("\"" + node.Attributes["name"].Value + "\"")); // Match the aircraft type
                 }
                 if (count == 0)
                 {
                     // XML Aircraft not found in mission file. Normal behaviour.
                     Console.ForegroundColor = ConsoleColor.DarkGray;
-                    Console.WriteLine("no "+ node.Attributes["name"].Value+" unit found.");
+                    Console.WriteLine("no "+ node.Attributes["name"].Value+" unit found.\n");
                     Console.ResetColor();
                 }
                 
@@ -194,6 +195,7 @@ namespace DCS_Radio_Mission_Mod
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("coded by Romain 'Dusty' T.");
                 Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Red;
                 // Check if any argument given
                 if (args.Length != 0)
                 {
@@ -262,6 +264,8 @@ namespace DCS_Radio_Mission_Mod
                                         string[] missionA_mod = ReplaceRadioPreset(missionA, template, side);
 
                                         // Changes are done, write the array back to the file
+                                        Console.ForegroundColor = ConsoleColor.Yellow;
+                                        Console.WriteLine("~~ Overwriting mission file");
                                         File.WriteAllLines(mission_file, missionA_mod);
 
                                         // Zip it back up, replacing existing
@@ -278,7 +282,11 @@ namespace DCS_Radio_Mission_Mod
                                             {
                                                 existing.Delete();
                                             }
-                                            archive.CreateEntryFromFile(path + @"\" + f + @"\SETTINGS.lua", f + @"/SETTINGS.lua");
+                                            if (File.Exists(path + @"\" + f + @"\SETTINGS.lua"))
+                                            {
+                                                Console.WriteLine("~~ Creating A-10C presets file for " + f);
+                                                archive.CreateEntryFromFile(path + @"\" + f + @"\SETTINGS.lua", f + @"/SETTINGS.lua");
+                                            }
                                             // Dispose of temp folders
                                             if (Directory.Exists(path + @"\" + f))
                                             {
@@ -287,6 +295,7 @@ namespace DCS_Radio_Mission_Mod
                                         }
 
                                         // Dispose of temp mission file
+                                        Console.WriteLine("~~ Cleaning up");
                                         File.Delete(mission_file);
                                     }
                                 }
@@ -322,7 +331,7 @@ namespace DCS_Radio_Mission_Mod
                 }
                 // Display results before exiting
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\nALL DONE!");
+                Console.WriteLine("== ALL DONE!");
                 Console.ResetColor();
                 Console.WriteLine("\nPress any key to exit this window...");
                 Console.ReadKey();
