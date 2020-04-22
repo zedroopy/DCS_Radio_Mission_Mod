@@ -41,8 +41,8 @@ namespace DCS_Radio_Mission_Mod
             XmlNode node;
             string wpath = "", defaultFreq="", acft, XmlAcft;
             string[] a = arr;
-            int units, skill, name, presets, type, radios, sortie, coalition, coalitionBlue, coalitionRed, lastLine;
-            units = skill = name = presets = type = radios = sortie = coalition = coalitionBlue = coalitionRed = lastLine = 1;
+            int units, skill, name, presets, type, radios, sortie, coalition, coalitionBlue, coalitionRed, lastLine, presetEnd;
+            units = skill = name = presets = type = radios = sortie = coalition = coalitionBlue = coalitionRed = lastLine = presetEnd = 1;
             Regex RegUnit = new Regex("\\[\\d\\]");
             Regex RegClient = new Regex("\\[\\\"skill\\\"\\]\\s*=\\s*\\\"Client\\\"");
             Regex RegType = new Regex("\\[\\\"type\\\"\\]\\s*=\\s*");
@@ -164,7 +164,9 @@ namespace DCS_Radio_Mission_Mod
                                                     a[presets] = RegFreq.Replace(a[presets], preset.InnerText); // replace with new frequency
                                                     //DBG:Display modified version
                                                     //DBG:Console.WriteLine(RemoveLeadingSpace(a[presets]));
+                                                    if (presets > presetEnd) { presetEnd = presets; }
                                                 }
+                                                lastLine = presetEnd + 1;
                                             }
                                         }
                                     }
