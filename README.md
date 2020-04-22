@@ -42,5 +42,5 @@ Cela permet d'aider les concepteurs de mission, en leur évitant de régler à l
 
  ### Modèle XML
 Le Modèle XML doit suivre une arborescence identique au modèle par défaut, car il est validé par rapport à un XSD au lancement.
-Pour ceux peu familier avec le XML, cela veut dire que le modèle n'accepte pasde nouveau champ, et le nombre de presets est limité.
+Pour ceux peu familier avec le XML, cela veut dire que le modèle n'accepte pas de nouveau champ, et le nombre de presets est limité.
 Simplement, cela veut dire que l'ordre des entités complètes importe peu, mais que vous devez uniquement modifier la valeur des fréquences entre les balises.
